@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     successColor() {
-      return this.userSelectColor()['$--color-primary'] || '#409EFF';
+      return this.userSelectColor()['$--color-primary'] || '#18ae66';
     },
     failedColor() {
       return this.userSelectColor()['$--color-danger'] || '#F56C6C';

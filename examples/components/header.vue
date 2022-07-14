@@ -4,7 +4,7 @@
   }
 
   #v3-banner {
-    background-color: #409EFF;
+    background-color: #18ae66;
     min-height: 30px;
     padding: 5px 60px;
     z-index: 19;
@@ -133,18 +133,18 @@
           color: #888;
 
           &:hover {
-            color: #409EFF;
+            color: #18ae66;
           }
           &.active {
              font-weight: bold;
-             color: #409EFF;
+             color: #18ae66;
            }
         }
       }
 
       a {
         text-decoration: none;
-        color: #1989FA;
+        // color: #1989FA;
         opacity: 0.5;
         display: block;
         padding: 0 22px;
@@ -162,7 +162,7 @@
           left: calc(50% - 15px);
           width: 30px;
           height: 2px;
-          background: #409EFF;
+          background: #18ae66;
         }
       }
     }
@@ -197,7 +197,7 @@
 
     .is-active {
       span, i {
-        color: #409EFF;
+        color: #18ae66;
       }
       i {
         transform: rotateZ(180deg) translateY(3px);
@@ -206,7 +206,7 @@
 
     &:hover {
       span, i {
-        color: #409EFF;
+        color: #18ae66;
       }
     }
   }
@@ -297,14 +297,9 @@
         <h1><router-link :to="`/${ lang }`">
           <!-- logo -->
           <slot>
-            <img
-              src="../assets/images/element-logo.svg"
-              alt="element-logo"
-              class="nav-logo">
-            <img
-              src="../assets/images/element-logo-small.svg"
-              alt="element-logo"
-              class="nav-logo-small">
+          <el-link style="color: #18ae66">
+           <h1> Post-UI </h1>
+          </el-link>
           </slot>
 
         </router-link></h1>
@@ -497,10 +492,10 @@
       };
       xhr.open('GET', '/versions.json');
       xhr.send();
-      let primaryLast = '#409EFF';
+      let primaryLast = '#18ae66';
       bus.$on(ACTION_USER_CONFIG_UPDATE, (val) => {
         let primaryColor = val.global['$--color-primary'];
-        if (!primaryColor) primaryColor = '#409EFF';
+        if (!primaryColor) primaryColor = '#18ae66';
         const base64svg = 'data:image/svg+xml;base64,';
         const imgSet = document.querySelectorAll('h1 img');
         imgSet.forEach((img) => {
